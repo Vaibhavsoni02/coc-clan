@@ -13,8 +13,19 @@ def fetch_data():
 def display_data(data):
     st.title("Clan Information")
     st.write("Name:", data["name"])
-    st.write("Clan Level:", data["clanLevel"])
+    st.write("Tag:", data["tag"])
+    st.write("Type:", data["type"])
+    st.write("Description:", data["description"])
     st.write("Location:", data["location"]["name"])
+    st.write("Is Family Friendly:", data["isFamilyFriendly"])
+    st.image(data["badgeUrls"]["large"], caption="Clan Badge")
+    st.write("Clan Level:", data["clanLevel"])
+    st.write("Clan Points:", data["clanPoints"])
+    st.write("Required Trophies:", data["requiredTrophies"])
+    st.write("War Frequency:", data["warFrequency"])
+    st.write("War Win Streak:", data["warWinStreak"])
+    st.write("War Wins:", data["warWins"])
+    st.write("Members:", data["members"])
     # Add more fields here as needed
 
 def main():

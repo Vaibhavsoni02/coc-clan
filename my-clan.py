@@ -38,3 +38,6 @@ def main():
             st.error("Failed to fetch clan data. Please check the API response.")
     else:
         st.write("Click the button to fetch the clan data.")
+
+if __name__ == "__main__":
+    main()

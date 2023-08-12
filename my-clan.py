@@ -25,11 +25,12 @@ member_details = [[
     member['builderBaseTrophies'],
     member['donations'],
     member['league']['name'],
-    member['league']['iconUrls']['small']
+    #member['league']['iconUrls']['small']
 ] for member in members]
 
 # Creating a Pandas DataFrame with custom column names
-columns = ['Tag', 'Name', 'Role', 'Exp Level', 'Trophies', 'Builder Base Trophies', 'Donations', 'league.name', 'league.Icon']
+columns = ['Tag', 'Name', 'Role', 'Exp Level', 'Trophies', 'Builder Base Trophies', 'Donations', 'league.name']
+#if we want to include icon url 'league.Icon'
 member_df = pd.DataFrame(member_details, columns=columns)
 
 # Title of the dashboard

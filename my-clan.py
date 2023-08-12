@@ -23,7 +23,7 @@ member_details = [[
     member['expLevel'],
     member['trophies'],
     member['builderBaseTrophies'],
-    member['donations']
+    member['donations'],
     member['league']
 ] for member in members]
 

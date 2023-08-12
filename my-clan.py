@@ -24,7 +24,7 @@ member_details = [[
     member['trophies'],
     member['builderBaseTrophies'],
     member['donations'],
-    member['league']
+    member['league.name']
 ] for member in members]
 
 # Creating a Pandas DataFrame with custom column names

@@ -32,9 +32,9 @@ def main():
     st.sidebar.title("Clash of Clans Clan Information")
     if st.sidebar.button("Fetch Clan Data"):
         data = fetch_data()
-        display_data(data)
+        if data:  # Check if data is not None or empty
+            display_data(data)
+        else:
+            st.error("Failed to fetch clan data. Please check the API response.")
     else:
         st.write("Click the button to fetch the clan data.")
-
-if __name__ == "__main__":
-    main()

@@ -54,7 +54,7 @@ with col2:
     #st.image("logo_clashofclans_m.png", width=225)
     st.write("")
 with col3:
-    st.image(clan_data['badgeUrls']['large'])
+    st.image(clan_data['badgeUrls']['medium'])
     st.write("")
 
 st.write("----")

@@ -36,7 +36,7 @@ member_df = pd.DataFrame(member_details, columns=columns)
 # Frontend
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.image("https://api-assets.clashofclans.com/badges/200/NObn-0xqZH7CYYplcYo-Pshf97XZsh-_n19i20W6Imw.png")
+    st.image("https://link.clashofclans.com/build/0.7/images/clashofclans/deco_clashofclans_m.png")
     st.write("")
 with col2:
     st.image("logo_clashofclans_m.png", width=225)

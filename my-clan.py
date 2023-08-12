@@ -12,7 +12,7 @@ def fetch_clan_details():
 def display_clan_details():
     details = fetch_clan_details()
     st.title('Clan Details')
-    st.image(details['badgeUrls']['medium'], caption='Clan Badge')
+    #st.image(details['badgeUrls']['medium'], caption='Clan Badge')
     st.subheader('Name:')
     st.write(details['name'])
     st.subheader('Type:')

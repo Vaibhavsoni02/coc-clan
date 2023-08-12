@@ -31,7 +31,7 @@ columns = ['Tag', 'Name', 'Role', 'Exp Level', 'Trophies', 'Builder Base Trophie
 member_df = pd.DataFrame(member_details, columns=columns)
 
 # Title of the dashboard
-st.title('Clan Dashboard'- st.write(clan_data['name']))
+st.title('Clan Dashboard')
 
 # Metrics
 st.subheader('Metrics')

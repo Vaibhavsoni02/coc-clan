@@ -24,11 +24,12 @@ member_details = [[
     member['trophies'],
     member['builderBaseTrophies'],
     member['donations'],
-    member['league.name']
+    member['league']['name'],
+    member['league']['iconUrls']['small']
 ] for member in members]
 
 # Creating a Pandas DataFrame with custom column names
-columns = ['Tag', 'Name', 'Role', 'Exp Level', 'Trophies', 'Builder Base Trophies', 'Donations', 'league.name']
+columns = ['Tag', 'Name', 'Role', 'Exp Level', 'Trophies', 'Builder Base Trophies', 'Donations', 'league.name', 'league.Icon']
 member_df = pd.DataFrame(member_details, columns=columns)
 
 # Title of the dashboard

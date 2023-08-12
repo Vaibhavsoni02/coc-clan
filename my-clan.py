@@ -31,7 +31,7 @@ columns = ['Tag', 'Name', 'Role', 'Exp Level', 'Trophies', 'Builder Base Trophie
 member_df = pd.DataFrame(member_details, columns=columns)
 
 # Title of the dashboard
-st.title('Clash of Clans Clan Dashboard')
+st.title('Clan Dashboard'- st.write(clan_data['name']))
 
 # Metrics
 st.subheader('Metrics')

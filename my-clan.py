@@ -33,15 +33,13 @@ columns = ['League', 'Name', 'Role', 'Exp Level', 'Trophies', 'Builder Base Trop
 #if we want to include icon url 'league.Icon'
 member_df = pd.DataFrame(member_details, columns=columns)
 
-# Title of the dashboard
-st.title('Clan Dashboard')
-
 # Frontend
 col1, col2, col3 = st.columns(3)
 with col1:
     st.write("")
 with col2:
     st.image("logo_clashofclans_m.png", width=225)
+    st.image("https://api-assets.clashofclans.com/badges/200/NObn-0xqZH7CYYplcYo-Pshf97XZsh-_n19i20W6Imw.png")
     st.write("")
 with col3:
     st.write("")

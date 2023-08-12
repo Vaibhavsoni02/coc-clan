@@ -1,6 +1,6 @@
 import streamlit as st
 import requests
-import json
+import pandas as pd
 
 # Function to fetch data from the Clash of Clans API
 def fetch_data():
@@ -26,18 +26,24 @@ member_details = [[
     member['donations']
 ] for member in members]
 
+# Creating a Pandas DataFrame with custom column names
+columns = ['Tag', 'Name', 'Role', 'Exp Level', 'Trophies', 'Builder Base Trophies', 'Donations']
+member_df = pd.DataFrame(member_details, columns=columns)
+
 # Title of the dashboard
 st.title('Clash of Clans Clan Dashboard')
 
 # Metrics
 st.subheader('Metrics')
+st.write('Clan Name:', clan_data['name'])
+st.write('Clan Tag:', clan_data['tag'])
+st.write('Clan War Wins:', clan_data['warWins'])
+st.write('Clan Builder Points:', clan_data['clanBuilderBasePoints'])
+st.write('Clan Capital Points:', clan_data['clanCapitalPoints'])
 st.write('Total Members:', clan_data['members'])
 st.write('Clan Points:', clan_data['clanPoints'])
 st.write('Clan Level:', clan_data['clanLevel'])
 
 # Member details table
 st.subheader('Member Details')
-st.table(
-    member_details,
-    columns=['Tag', 'Name', 'Role', 'Exp Level', 'Trophies', 'Builder Base Trophies', 'Donations']
-)
+st.table(member_df)

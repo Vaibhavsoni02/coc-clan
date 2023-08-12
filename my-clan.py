@@ -47,20 +47,14 @@ with col1:
 with col2:
     st.markdown('''
     <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=RGRPVQUJ">
-        <img src="logo_clashofclans_m.png" />
+        <img src="https://github.com/Vaibhavsoni02/coc-clan/blob/main/logo_clashofclans_m.png" />
     </a>''',
     unsafe_allow_html=True
     )
     #st.image("logo_clashofclans_m.png", width=225)
     st.write("")
 with col3:
-    st.markdown('''
-    <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=RGRPVQUJ">
-        <img src=st.image(clan_data['badgeUrls']['large']) />
-    </a>''',
-    unsafe_allow_html=True
-    )
-    #st.image(clan_data['badgeUrls']['large'])
+    st.image(clan_data['badgeUrls']['large'])
     st.write("")
 
 st.write("----")

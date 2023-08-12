@@ -38,7 +38,7 @@ col1, col2, col3 = st.columns(3)
 with col1:
     st.markdown('''
     <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=RGRPVQUJ">
-        <img src="https://static.wikia.nocookie.net/clashofclans/images/f/f4/Super_Dragon_info.png/revision/latest/scale-to-width-down/400?cb=20211209092118" />
+        <img src="https://static.wikia.nocookie.net/clashofclans/images/f/f4/Super_Dragon_info.png" />
     </a>''',
     unsafe_allow_html=True
 )

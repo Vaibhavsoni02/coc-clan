@@ -45,10 +45,22 @@ with col1:
     #st.image("https://link.clashofclans.com/build/0.7/images/clashofclans/deco_clashofclans_m.png")
     st.write("")
 with col2:
-    st.image("logo_clashofclans_m.png", width=225)
+    st.markdown('''
+    <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=RGRPVQUJ">
+        <img src="logo_clashofclans_m.png" />
+    </a>''',
+    unsafe_allow_html=True
+    )
+    #st.image("logo_clashofclans_m.png", width=225)
     st.write("")
 with col3:
-    st.image(clan_data['badgeUrls']['large'])
+    st.markdown('''
+    <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=RGRPVQUJ">
+        <img src=st.image(clan_data['badgeUrls']['large']) />
+    </a>''',
+    unsafe_allow_html=True
+    )
+    #st.image(clan_data['badgeUrls']['large'])
     st.write("")
 
 st.write("----")

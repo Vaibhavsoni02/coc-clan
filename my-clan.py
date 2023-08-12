@@ -46,4 +46,4 @@ st.write('Clan Level:', clan_data['clanLevel'])
 
 # Member details table
 st.subheader('Member Details')
-st.table(member_df)
+st.dataframe(member_df)

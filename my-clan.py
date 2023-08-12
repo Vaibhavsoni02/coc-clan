@@ -59,16 +59,29 @@ with col3:
 
 st.write("----")
 
+
+# Metrics in Sidebar
+st.sidebar.subheader('Metrics')
+st.sidebar.write('Clan Name:', clan_data['name'])
+st.sidebar.write('Clan Tag:', clan_data['tag'])
+st.sidebar.write('Clan War Wins:', clan_data['warWins'])
+st.sidebar.write('Clan Builder Points:', clan_data['clanBuilderBasePoints'])
+st.sidebar.write('Clan Capital Points:', clan_data['clanCapitalPoints'])
+st.sidebar.write('Total Members:', clan_data['members'])
+st.sidebar.write('Clan Points:', clan_data['clanPoints'])
+st.sidebar.write('Clan Level:', clan_data['clanLevel'])
+
+
 # Metrics
-st.subheader('Metrics')
-st.write('Clan Name:', clan_data['name'])
-st.write('Clan Tag:', clan_data['tag'])
-st.write('Clan War Wins:', clan_data['warWins'])
-st.write('Clan Builder Points:', clan_data['clanBuilderBasePoints'])
-st.write('Clan Capital Points:', clan_data['clanCapitalPoints'])
-st.write('Total Members:', clan_data['members'])
-st.write('Clan Points:', clan_data['clanPoints'])
-st.write('Clan Level:', clan_data['clanLevel'])
+#st.subheader('Metrics')
+# st.write('Clan Name:', clan_data['name'])
+# st.write('Clan Tag:', clan_data['tag'])
+# st.write('Clan War Wins:', clan_data['warWins'])
+# st.write('Clan Builder Points:', clan_data['clanBuilderBasePoints'])
+# st.write('Clan Capital Points:', clan_data['clanCapitalPoints'])
+# st.write('Total Members:', clan_data['members'])
+# st.write('Clan Points:', clan_data['clanPoints'])
+# st.write('Clan Level:', clan_data['clanLevel'])
 
 # Member details table
 st.subheader('Member Details')

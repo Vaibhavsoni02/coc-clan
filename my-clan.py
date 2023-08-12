@@ -36,7 +36,13 @@ member_df = pd.DataFrame(member_details, columns=columns)
 # Frontend
 col1, col2, col3 = st.columns(3)
 with col1:
-    st.image("https://link.clashofclans.com/build/0.7/images/clashofclans/deco_clashofclans_m.png")
+    st.markdown('''
+    <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=RGRPVQUJ">
+        <img src="https://static.wikia.nocookie.net/clashofclans/images/f/f4/Super_Dragon_info.png/revision/latest/scale-to-width-down/400?cb=20211209092118" />
+    </a>''',
+    unsafe_allow_html=True
+)
+    #st.image("https://link.clashofclans.com/build/0.7/images/clashofclans/deco_clashofclans_m.png")
     st.write("")
 with col2:
     st.image("logo_clashofclans_m.png", width=225)

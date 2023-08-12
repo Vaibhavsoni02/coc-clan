@@ -17,19 +17,19 @@ clan_data = fetch_data()
 # Extracting member details
 members = clan_data['memberList']
 member_details = [[
-    member['tag'],
+    member['league']['name'],
     member['name'],
     member['role'],
     member['expLevel'],
     member['trophies'],
     member['builderBaseTrophies'],
     member['donations'],
-    member['league']['name'],
+    member['tag'],
     #member['league']['iconUrls']['small']
 ] for member in members]
 
 # Creating a Pandas DataFrame with custom column names
-columns = ['Tag', 'Name', 'Role', 'Exp Level', 'Trophies', 'Builder Base Trophies', 'Donations', 'league.name']
+columns = ['League', 'Name', 'Role', 'Exp Level', 'Trophies', 'Builder Base Trophies', 'Donations', 'Tag']
 #if we want to include icon url 'league.Icon'
 member_df = pd.DataFrame(member_details, columns=columns)
 

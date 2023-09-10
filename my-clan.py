@@ -12,10 +12,64 @@ def fetch_data():
     return response.json()
 
 # Fetching clan data
-# clan_data = fetch_data()
+clan_data = fetch_data()
 
 # Extracting member details
+members = clan_data['memberList']
+member_details = [[
+    member['league']['name'],
+    member['name'],
+    member['role'],
+    member['expLevel'],
+    member['trophies'],
+    member['builderBaseTrophies'],
+    member['donations'],
+    member['tag'],
+    #member['league']['iconUrls']['small']
+] for member in members]
 
+# Creating a Pandas DataFrame with custom column names
+columns = ['League', 'Name', 'Role', 'Exp Level', 'Trophies', 'Builder Base Trophies', 'Donations', 'Tag']
+#if we want to include icon url 'league.Icon'
+member_df = pd.DataFrame(member_details, columns=columns)
+
+# Frontend
+col1, col2, col3 = st.columns(3)
+with col1:
+    st.markdown('''
+    <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=RGRPVQUJ">
+        <img src="https://static.wikia.nocookie.net/clashofclans/images/f/f4/Super_Dragon_info.png" class="center" />
+    </a>''',
+    unsafe_allow_html=True
+)
+    #st.image("https://link.clashofclans.com/build/0.7/images/clashofclans/deco_clashofclans_m.png")
+    st.write("")
+with col2:
+    st.markdown('''
+    <a href="https://link.clashofclans.com/en?action=OpenClanProfile&tag=RGRPVQUJ">
+        <img src="https://link.clashofclans.com/build/0.7/images/clashofclans/logo_clashofclans_m.png" class="center"/>
+    </a>''',
+    unsafe_allow_html=True
+    )
+    #st.image("logo_clashofclans_m.png", width=225)
+    st.write("")
+with col3:
+    st.image(clan_data['badgeUrls']['medium'])
+    st.write("")
+
+st.write("----")
+
+
+# Metrics in Sidebar
+st.sidebar.subheader('Metrics')
+st.sidebar.write('Clan Name:', clan_data['name'])
+st.sidebar.write('Clan Tag:', clan_data['tag'])
+st.sidebar.write('Clan War Wins:', clan_data['warWins'])
+st.sidebar.write('Clan Builder Points:', clan_data['clanBuilderBasePoints'])
+st.sidebar.write('Clan Capital Points:', clan_data['clanCapitalPoints'])
+st.sidebar.write('Total Members:', clan_data['members'])
+st.sidebar.write('Clan Points:', clan_data['clanPoints'])
+st.sidebar.write('Clan Level:', clan_data['clanLevel'])
 
 
 # Metrics
@@ -30,5 +84,5 @@ def fetch_data():
 # st.write('Clan Level:', clan_data['clanLevel'])
 
 # Member details table
-# st.subheader('Member Details')
-# st.dataframe(member_df)
+st.subheader('Member Details')
+st.dataframe(member_df)

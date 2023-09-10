@@ -12,7 +12,7 @@ def fetch_data():
     return response.json()
 
 # Fetching clan data
-clan_data = fetch_data()
+# clan_data = fetch_data()
 
 # Extracting member details
 

@@ -30,5 +30,5 @@ clan_data = fetch_data()
 # st.write('Clan Level:', clan_data['clanLevel'])
 
 # Member details table
-#st.subheader('Member Details')
-#st.dataframe(member_df)
+# st.subheader('Member Details')
+# st.dataframe(member_df)
